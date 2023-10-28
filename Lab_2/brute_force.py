@@ -7,7 +7,7 @@ def brute_force(hash_value, num_threads):
     start_time = time.time()
     found = False
 
-    # Составляем все возможные комбинации пяти строчных букв английского алфавита ASCII
+    # Составляем всевозможные комбинации пятибуквенных сочетаний английского алфавита ASCII
     passwords = [''.join(p) for p in itertools.product('abcdefghijklmnopqrstuvwxyz', repeat=5)]
     # Разделяем список паролей на равные части для каждого потока
     chunk_size = len(passwords) // num_threads
